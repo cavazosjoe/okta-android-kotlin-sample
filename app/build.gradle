@@ -9,6 +9,15 @@ rootProject.file("okta.properties").withInputStream { oktaProperties.load(it) }
 android {
     compileSdk 34
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         applicationId "com.okta.android.samples.browser_sign_in"
         minSdk 25
@@ -29,6 +38,7 @@ android {
     compileOptions {
         coreLibraryDesugaringEnabled true
     }
+    namespace 'com.okta.android.samples.browser_sign_in'
 }
 
 dependencies {
