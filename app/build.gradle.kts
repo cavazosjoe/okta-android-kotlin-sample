@@ -34,7 +34,7 @@ android {
 
 dependencies {
     // Android studio doesn't support newer versions?
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.3")
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
